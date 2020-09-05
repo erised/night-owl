@@ -1,0 +1,29 @@
+{
+  "name": "night-owl",
+  "version": "1.0.0",
+  "description": "A chrome extension that ensures that you don't go blind with night mode on.",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc -p . && yarn exec cp src/main/manifest.json dist/main/"
+  },
+  "author": "",
+  "dependencies": {
+    "@types/chrome": "0.0.100",
+    "@types/jest": "^25.1.4",
+    "@types/jquery": "^3.3.38",
+    "copy-webpack-plugin": "^5.1.1",
+    "jest": "^25.1.0",
+    "rimraf": "^3.0.2 ",
+    "ts-jest": "^25.2.1 ",
+    "ts-loader": "^6.2.1",
+    "typescript": "~3.8.3 "
+  },
+  "devDependencies": {
+    "codelyzer": "^5.2.0",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.5.4",
+    "tslint": "~5.15.0"
+  }
+}

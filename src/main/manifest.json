@@ -1,0 +1,29 @@
+{
+  "name": "Night Owl",
+  "description": "A chrome extension that ensures that you don't go blind with night mode on.",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "browser_action": {},
+  "background": {
+    "scripts": [
+      "./background-scripts/trigger.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "./content-scripts/external/jquery.js",
+        "./content-scripts/formatter.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}
